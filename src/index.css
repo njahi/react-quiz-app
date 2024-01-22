@@ -40,3 +40,6 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.main {
+  width: 50rem;
+}
