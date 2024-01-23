@@ -71,6 +71,14 @@ h3 {
   color: var(--color-medium);
   font-size: 1.4rem;
 }
+.error {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 2rem;
+  background-color: #495057;
+  border-radius: 100px;
+}
 .start {
   display: flex;
   flex-direction: column;
