@@ -43,3 +43,11 @@ body {
 .main {
   width: 50rem;
 }
+img {
+  width: 14rem;
+}
+
+h1 {
+  font-family: "Codystar";
+  font-size: 5.6rem;
+}

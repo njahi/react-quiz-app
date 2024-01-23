@@ -5,7 +5,7 @@ export default function Header() {
         src='logo512.png'
         alt='logo'
       />
-      <h2>The React Quiz</h2>
+      <h1>The React Quiz</h1>
     </header>
   );
 }
