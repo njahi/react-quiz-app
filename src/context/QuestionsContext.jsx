@@ -10,6 +10,7 @@ const Base_Url = "http://localhost:8000";
 function QuestionsProvider({ children }) {
   const [questions, setQuestions] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  // const [error, setError] = useState("");
   useEffect(function () {
     async function fetchQuestions() {
       try {
@@ -18,7 +19,7 @@ function QuestionsProvider({ children }) {
         const data = await res.json();
         setQuestions(data);
       } catch (error) {
-        alert("there was a problem loading data");
+        // setError(<Error />);
       } finally {
         setIsLoading(false);
       }
@@ -30,6 +31,7 @@ function QuestionsProvider({ children }) {
       value={{
         questions,
         isLoading,
+        // error,
       }}>
       {children}
     </QuestionsContext.Provider>
