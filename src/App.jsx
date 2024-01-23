@@ -11,7 +11,7 @@ function App() {
       <Header />
       {isLoading === true && <Loader />}
       {error && <Error />}
-      <Main>{isLoading === false && <StartScreen />}</Main>
+      <Main>{isLoading === false && !error ? <StartScreen /> : ""}</Main>
     </div>
   );
 }
