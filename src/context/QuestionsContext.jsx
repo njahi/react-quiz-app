@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react-refresh/only-export-components */
 import { useState } from "react";
+import { useEffect } from "react";
 import { useContext } from "react";
 import { createContext } from "react";
 
@@ -9,7 +10,30 @@ const Base_Url = "http://localhost:8000";
 function QuestionsProvider({ children }) {
   const [questions, setQuestions] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  return <QuestionsContext.Provider>{children}</QuestionsContext.Provider>;
+  useEffect(function () {
+    async function fetchQuestions() {
+      try {
+        setIsLoading(true);
+        const res = await fetch(`${Base_Url}/questions`);
+        const data = await res.json();
+        setQuestions(data);
+      } catch (error) {
+        alert("there was a problem loading data");
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    fetchQuestions();
+  }, []);
+  return (
+    <QuestionsContext.Provider
+      value={{
+        questions,
+        isLoading,
+      }}>
+      {children}
+    </QuestionsContext.Provider>
+  );
 }
 function useQuestions() {
   const context = useContext(QuestionsContext);
