@@ -11,6 +11,7 @@ function QuestionsProvider({ children }) {
   const [questions, setQuestions] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const [active, setActive] = useState(false);
   useEffect(function () {
     async function fetchQuestions() {
       try {
