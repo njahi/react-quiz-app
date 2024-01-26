@@ -23,6 +23,7 @@ function QuestionsProvider({ children }) {
         setError("theres a problem loading data");
       } finally {
         setIsLoading(false);
+        setActive(true);
       }
     }
     fetchQuestions();
@@ -32,6 +33,7 @@ function QuestionsProvider({ children }) {
       value={{
         questions,
         isLoading,
+        active,
         error,
       }}>
       {children}
