@@ -8,7 +8,10 @@ export default function Question() {
       {questions.map((qtn) => (
         <div key={qtn.id}>
           <h4>{qtn.question}</h4>
-          <Options question={qtn} />
+          <Options
+            question={qtn}
+            id={qtn.id}
+          />
         </div>
       ))}
     </div>
