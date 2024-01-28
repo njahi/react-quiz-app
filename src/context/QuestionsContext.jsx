@@ -16,6 +16,7 @@ function QuestionsProvider({ children }) {
     async function fetchQuestions() {
       try {
         setIsLoading(true);
+        setActive(false);
         const res = await fetch(`${Base_Url}/questions`);
         const data = await res.json();
         setQuestions(data);
