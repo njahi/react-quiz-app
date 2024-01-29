@@ -24,11 +24,13 @@ function QuestionsProvider({ children }) {
         setError("theres a problem loading data");
       } finally {
         setIsLoading(false);
-        setActive(true);
       }
     }
     fetchQuestions();
   }, []);
+  function onClick() {
+    setActive(true);
+  }
   return (
     <QuestionsContext.Provider
       value={{
@@ -36,6 +38,7 @@ function QuestionsProvider({ children }) {
         isLoading,
         active,
         error,
+        onClick,
       }}>
       {children}
     </QuestionsContext.Provider>
