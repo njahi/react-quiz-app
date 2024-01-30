@@ -1,7 +1,8 @@
 import { useQuestions } from "../context/QuestionsContextReducer";
 
 export default function Progress() {
-  const { index, answer, numQuestions, points } = useQuestions();
+  const { index, answer, numQuestions, points, maxPossiblePoints } =
+    useQuestions();
   return (
     <header className='progress'>
       <progress
@@ -11,8 +12,7 @@ export default function Progress() {
       <p>
         Question<strong>{index + 1}</strong> / {numQuestions}
       </p>
-
-      <p>{points}</p>
+      <p>{points}</p> / {maxPossiblePoints}
     </header>
   );
 }
