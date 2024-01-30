@@ -3,7 +3,7 @@ import { useQuestions } from "../context/QuestionsContext";
 export default function Progress() {
   const { questions } = useQuestions();
   return (
-    <header>
+    <header className='progress'>
       <progress />
       <p>
         Question<strong>{}</strong>
