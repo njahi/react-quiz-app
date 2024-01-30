@@ -10,8 +10,8 @@ export default function Progress() {
         value={index + Number(questions.answer !== null)}
       />
       <p>
-        Question<strong>{}</strong>
-      </p>{" "}
+        Question<strong>{index + 1}</strong>
+      </p>
       / {questions.length}
       <p>{questions.points}</p>
     </header>
