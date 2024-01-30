@@ -5,6 +5,7 @@ import StartScreen from "./components/StartScreen";
 import { useQuestions } from "./context/QuestionsContext";
 import Error from "./components/Error";
 import Question from "./components/Question";
+import Progress from "./components/Progress";
 function App() {
   const { isLoading, error, active } = useQuestions();
   return (
@@ -14,7 +15,12 @@ function App() {
       {error && <Error />}
       <Main>
         {isLoading === false && !error ? <StartScreen /> : ""}
-        {active === true && <Question />}
+        {active === true && (
+          <>
+            <Progress />
+            <Question />
+          </>
+        )}
       </Main>
     </div>
   );
