@@ -9,9 +9,9 @@ export default function Progress() {
         value={index + Number(answer !== null)}
       />
       <p>
-        Question<strong>{index + 1}</strong>
+        Question<strong>{index + 1}</strong> / {numQuestions}
       </p>
-      / {numQuestions}
+
       <p>{points}</p>
     </header>
   );
