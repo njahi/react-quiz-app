@@ -1,4 +1,4 @@
-import { useQuestions } from "../context/QuestionsContext";
+import { useQuestions } from "../context/QuestionsContextReducer";
 import Options from "./Options";
 
 export default function Question() {

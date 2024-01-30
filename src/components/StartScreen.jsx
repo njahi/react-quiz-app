@@ -1,4 +1,4 @@
-import { useQuestions } from "../context/QuestionsContext";
+import { useQuestions } from "../context/QuestionsContextReducer";
 
 function StartScreen() {
   const { numQuestions, dispatch } = useQuestions();
