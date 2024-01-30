@@ -1,19 +1,18 @@
 import { useQuestions } from "../context/QuestionsContext";
 
 export default function Progress() {
-  const { questions } = useQuestions();
-  const index = questions.index;
+  const { questions, index, answer, numQuestions, points } = useQuestions();
   return (
     <header className='progress'>
       <progress
         max={questions.length}
-        value={index + Number(questions.answer !== null)}
+        value={index + Number(answer !== null)}
       />
       <p>
         Question<strong>{index + 1}</strong>
       </p>
-      / {questions.length}
-      <p>{questions.points}</p>
+      / {numQuestions}
+      <p>{points}</p>
     </header>
   );
 }
