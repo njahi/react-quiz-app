@@ -1,11 +1,11 @@
-import { useQuestions } from "../context/QuestionsContext";
+import { useQuestions } from "../context/QuestionsContextReducer";
 
 export default function Progress() {
-  const { questions, index, answer, numQuestions, points } = useQuestions();
+  const { index, answer, numQuestions, points } = useQuestions();
   return (
     <header className='progress'>
       <progress
-        max={questions.length}
+        max={numQuestions}
         value={index + Number(answer !== null)}
       />
       <p>
