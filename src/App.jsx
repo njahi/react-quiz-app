@@ -6,6 +6,7 @@ import { useQuestions } from "./context/QuestionsContextReducer";
 import Error from "./components/Error";
 import Question from "./components/Question";
 import Progress from "./components/Progress";
+import Footer from "./components/Footer";
 function App() {
   const { status } = useQuestions();
   return (
@@ -19,6 +20,7 @@ function App() {
           <>
             <Progress />
             <Question />
+            <Footer></Footer>
           </>
         )}
       </Main>
