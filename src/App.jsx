@@ -7,6 +7,7 @@ import Error from "./components/Error";
 import Question from "./components/Question";
 import Progress from "./components/Progress";
 import Footer from "./components/Footer";
+import NextButton from "./components/NextButton";
 function App() {
   const { status } = useQuestions();
   return (
@@ -20,7 +21,9 @@ function App() {
           <>
             <Progress />
             <Question />
-            <Footer></Footer>
+            <Footer>
+              <NextButton />
+            </Footer>
           </>
         )}
       </Main>
