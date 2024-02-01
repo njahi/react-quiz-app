@@ -8,6 +8,7 @@ import Question from "./components/Question";
 import Progress from "./components/Progress";
 import Footer from "./components/Footer";
 import NextButton from "./components/NextButton";
+import FinishScreen from "./components/FinishScreen";
 function App() {
   const { status } = useQuestions();
   return (
@@ -26,6 +27,7 @@ function App() {
             </Footer>
           </>
         )}
+        {status === "finished" && <FinishScreen />}
       </Main>
     </div>
   );
