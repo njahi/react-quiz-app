@@ -201,3 +201,8 @@ progress {
   padding: 1.35rem 2.8rem;
   border-radius: 100px;
 }
+.highscore {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
