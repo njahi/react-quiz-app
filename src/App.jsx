@@ -9,6 +9,7 @@ import Progress from "./components/Progress";
 import Footer from "./components/Footer";
 import NextButton from "./components/NextButton";
 import FinishScreen from "./components/FinishScreen";
+import Timer from "./components/Timer";
 function App() {
   const { status } = useQuestions();
   return (
@@ -23,6 +24,7 @@ function App() {
             <Progress />
             <Question />
             <Footer>
+              <Timer />
               <NextButton />
             </Footer>
           </>
