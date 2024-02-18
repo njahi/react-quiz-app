@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useQuestions } from "../context/QuestionsContextReducer";
 
-function Options({ question }) {
+const Options = memo(function Options({ question }) {
   const { dispatch, answer } = useQuestions();
 
   const hasAnswered = answer !== null;
@@ -25,6 +25,7 @@ function Options({ question }) {
       ))}
     </div>
   );
-}
+});
 
 export default Options;
+// imported memo from react and used to to prevent the component from re-rendering when the question prop value does not change
