@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { memo } from "react";
 import { useQuestions } from "../context/QuestionsContextReducer";
 
 const Options = memo(function Options({ question }) {
